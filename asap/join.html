@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join ASAP · Ambrosia's Automotive</title>
+  <style>
+    :root { --navy:#0f172a; --cyan:#0891b2; --paper:#f6f7f9; --muted:#64748b; --line:#e2e8f0; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:var(--paper); color:#0b1220; line-height:1.5; }
+    header { background:var(--navy); color:#fff; padding:14px 20px; }
+    header a { color:#fff; text-decoration:none; }
+    .wrap { max-width:640px; margin:0 auto; padding:28px 20px 64px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:22px; margin:16px 0; }
+    .btn { display:inline-block; background:var(--cyan); color:#fff; text-decoration:none; padding:12px 16px; border-radius:6px; font-weight:700; margin:6px 8px 0 0; }
+    .btn.ghost { background:var(--navy); }
+    .fine { color:var(--muted); font-size:.9rem; }
+    h1 { font-size:1.5rem; }
+  </style>
+</head>
+<body>
+  <header><div class="wrap" style="padding:0;max-width:980px;"><a href="./">← ASAP plans</a></div></header>
+  <div class="wrap">
+    <h1 id="title">Create your membership</h1>
+    <p>Two steps. Login is your book of remaining services. Payment is Stripe.</p>
+    <div class="card">
+      <h2 style="margin-top:0;">1. Member login</h2>
+      <p id="planLine">Choose VIP or Preferred, then create the account.</p>
+      <a class="btn" id="create" href="https://amber-jolly-sapphire-harbor.grok.me/join?plan=vip">Create account / sign in</a>
+      <a class="btn ghost" href="https://amber-jolly-sapphire-harbor.grok.me/login?next=%2Faccount">I already have a login</a>
+    </div>
+    <div class="card">
+      <h2 style="margin-top:0;">2. Billing</h2>
+      <p>Card, invoices, and cancel live in Stripe. The shop does not store your full card number here.</p>
+      <a class="btn ghost" href="https://billing.stripe.com/p/login/14k3fJddLbr0dUY144">Open billing portal</a>
+      <a class="btn ghost" href="https://www.ambrosiasautomotive.com/subscription/">Or enroll on the main site</a>
+    </div>
+    <p class="fine">By joining you agree to Ambrosia's Service Assurance Plan terms effective September 28, 2026. <a href="https://www.ambrosiasautomotive.com/ambrosias-automotive-protection-plan-30day-2026-08-22/">Read the contract on the main website</a>. Questions: 419-214-0244 or service@ambrosiasautomotive.com.</p>
+  </div>
+  <script>
+    const p = new URLSearchParams(location.search).get('plan') || 'vip';
+    const vip = p !== 'preferred';
+    document.getElementById('title').textContent = vip ? 'Join ASAP VIP' : 'Join ASAP Preferred';
+    document.getElementById('planLine').textContent = vip
+      ? 'VIP is $49.99/month or $549.99/year. Oil changes, filters, blades, inspections, alignment, 20% off labor (max $100/RO), priority, Uber on included oil-change drop-off.'
+      : 'Preferred is $19.99/month or $219.99/year. Oil changes, rotations, one inspection, 10% off labor (max $50/RO).';
+    document.getElementById('create').href = 'https://amber-jolly-sapphire-harbor.grok.me/join?plan=' + (vip ? 'vip' : 'preferred');
+  </script>
+</body>
+</html>
