@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 90-Second Driveway Check — printable checklist · Nexus Fit</title>
+<meta name="description" content="A printable checklist for parents of new drivers. Your teen does the quick loop before every drive. You do the Sunday check. $19 instant PDF download.">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23F5F1E8'/><text x='16' y='23' font-family='Archivo,Helvetica,sans-serif' font-weight='700' font-size='20' text-anchor='middle' fill='%231F3D2B'>N</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+
+<!--
+  Tracking hook (no account connected yet — do not ship IDs here).
+  Funnel: page view -> buy_click (either button) -> purchase.
+
+  1. page view: fires automatically once a tag is installed on this page.
+  2. buy_click: both buttons carry data-event="buy_click" plus data-event-location,
+     data-event-value and data-event-currency for whichever tag manager we pick.
+  3. purchase: counted on the Stripe success redirect (/thanks/teen-driver.html)
+     or from a Stripe webhook. Not counted on this page.
+
+  When a Google Ads conversion ID exists, uncomment and fill in:
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXXX');
+    document.querySelectorAll('[data-event="buy_click"]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        gtag('event', 'conversion', {
+          send_to: 'AW-XXXXXXXXXX/XXXXXXXXXXXXXXXXXXX',
+          value: Number(el.dataset.eventValue),
+          currency: el.dataset.eventCurrency
+        });
+      });
+    });
+  </script>
+-->
+
+<style>
+  :root {
+    --paper: #F5F1E8;
+    --ink: #1F3D2B;
+    --ink-soft: #496352;
+    --accent: #F26B1D;
+    --frame: #DDD6C8;
+    --column: 480px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 28px 20px 32px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    max-width: var(--column);
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: Archivo, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+  }
+
+  .accent-rule {
+    width: 48px;
+    height: 4px;
+    margin: 12px 0 0;
+    border: 0;
+    background: var(--accent);
+  }
+
+  .subhead {
+    margin: 12px 0 0;
+    font-size: 18px;
+    line-height: 1.45;
+  }
+
+  .hero {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .points {
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .points li {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .points li + li { margin-top: 12px; }
+
+  .points li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M2.5 8.6l3.5 3.5 7.5-8' fill='none' stroke='%231F3D2B' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/></svg>") no-repeat center;
+  }
+
+  .buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 56px;
+    margin-top: 24px;
+    border-radius: 10px;
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: none;
+  }
+
+  .buy:hover { opacity: 0.92; }
+
+  .buy:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+  }
+
+  .trust {
+    margin: 10px 0 0;
+    color: var(--ink-soft);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .inside {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+    border: 1px solid var(--frame);
+    border-radius: 8px;
+  }
+
+  .caption {
+    margin: 8px 0 0;
+    color: var(--ink-soft);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  footer {
+    margin-top: 24px;
+    color: var(--ink-soft);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  footer p { margin: 0; }
+
+  footer p + p { margin-top: 8px; }
+
+  @media (min-width: 520px) {
+    body { padding: 28px 24px 32px; }
+    h1 { font-size: 44px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>The 90-Second Driveway Check</h1>
+  <hr class="accent-rule">
+  <p class="subhead">A printable checklist for parents of new drivers. Your teen does the quick loop before every drive. You do the Sunday check.</p>
+
+  <img class="hero" src="assets/cover-square-1080.webp" width="1080" height="1080" alt="The 90-Second Driveway Check printable checklist cover">
+
+  <ul class="points">
+    <li>A 90-second loop your teen runs before every drive: tires, lights, glass, and a look under the car. One cheap tire gauge is the only tool.</li>
+    <li>The penny tread test with clear park-it lines. Lincoln&rsquo;s whole head showing means they don&rsquo;t drive on that tire.</li>
+    <li>A Sunday-night 5-minute check for you, plus a page that sorts noises and warning lights into &ldquo;stop now&rdquo; or &ldquo;book this week.&rdquo;</li>
+  </ul>
+
+  <a class="buy" href="https://buy.stripe.com/9B600l8NQ1m6bPmc3m7kc03"
+     data-event="buy_click" data-event-location="above-preview"
+     data-event-value="19" data-event-currency="USD">Get the checklist &mdash; $19</a>
+  <p class="trust">Instant PDF download &middot; Secure checkout by Stripe &middot; Written by a working mechanic dad</p>
+
+  <img class="inside" src="assets/page1-preview-blur.png" width="1200" height="942" alt="Preview of page 1, Before they leave">
+  <p class="caption">Page 1 of 3. Print it, clip it to the visor, or keep a photo on your phone.</p>
+
+  <a class="buy" href="https://buy.stripe.com/9B600l8NQ1m6bPmc3m7kc03"
+     data-event="buy_click" data-event-location="below-preview"
+     data-event-value="19" data-event-currency="USD">Get the checklist &mdash; $19</a>
+
+  <footer>
+    <p>Not a repair guide.</p>
+    <p>&copy; Nexus Fit</p>
+  </footer>
+</main>
+</body>
+</html>
