@@ -13,6 +13,30 @@
   gtag('config', 'AW-18437228509');
 </script>
 
+<script>
+(function () {
+  var txn = '';
+  try {
+    txn = new URLSearchParams(window.location.search).get('session_id') || '';
+  } catch (e) {}
+
+  // One conversion per Stripe session, so a refresh or a bookmarked
+  // success URL does not count the purchase twice.
+  var key = 'gads-conv-' + (txn || 'teen-driver-converted');
+  try {
+    if (window.sessionStorage.getItem(key)) return;
+    window.sessionStorage.setItem(key, '1');
+  } catch (e) {}
+
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18437228509/UMarCPyi8fAcEN2Px9dE',
+    'value': 19.0,
+    'currency': 'USD',
+    'transaction_id': txn
+  });
+})();
+</script>
+
 <title>Your Teen Driver Checklist — Nexus Fit</title>
 <meta name="description" content="Download your Teen Driver Parent Checklist PDF. Instant delivery after Stripe checkout.">
 <meta name="robots" content="noindex">
